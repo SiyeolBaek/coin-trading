@@ -32,7 +32,7 @@ class Upbit(object):
 		return datas
 
 	# 분 차트 가져오기
-	def getMinChart(self, market_id, unit=1, count=1):
+	def getMinCharts(self, market_id, unit=1, count=1):
 		url = "https://api.upbit.com/v1/candles/minutes/"+str(unit)
 
 		querystring = {"market":market_id,"count":count}
@@ -43,10 +43,6 @@ class Upbit(object):
 			datas = json.loads(response.text)
 		except:
 			# API 요청 과다로 인한 오류
-			return False
-
-		# 오류 발생
-		if 'error' in datas.keys():
 			return False
 
 		return datas
