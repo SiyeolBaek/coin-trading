@@ -54,4 +54,6 @@ class Upbit(object):
 			print(datas['error'])
 			return False
 
+		datas.reverse()
+
 		return datas

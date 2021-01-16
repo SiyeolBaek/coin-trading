@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
 	# 20년 12월 1일 ~ 21년 1월 17일 거래 진행
 	_from = datetime.datetime(2020, 12, 1, 0, 0, 0)
-	_from += datetime.timedelta(minutes=UNIT) # 2020년 12월 1일 ~
 	_to = datetime.datetime(2021, 1, 17, 0, 0, 0)
 	targetTime = _from
 
