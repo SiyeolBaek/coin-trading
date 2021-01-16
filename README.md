@@ -14,7 +14,7 @@
 
 ```sql
 CREATE TABLE "trades" (
-	"no"	INTEGER, 			/* 거래 고유번호 */
+	"no"	INTEGER,			/* 거래 고유번호 */
 	"type"	TEXT,  			/* 거래 방식(매수, 매도) */
 	"price"	INTEGER,		/* 거래 금액 */
 	"amount"	INTEGER,	/* 거래 수량 */

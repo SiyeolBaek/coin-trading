@@ -32,10 +32,14 @@ class Upbit(object):
 		return datas
 
 	# 분 차트 가져오기
-	def getMinCharts(self, market_id, unit=1, count=1):
+	def getMinCharts(self, market_id, unit=1, count=1, to=''):
 		url = "https://api.upbit.com/v1/candles/minutes/"+str(unit)
 
 		querystring = {"market":market_id,"count":count}
+
+		# 마지막 캔들 시간이 존재하는 경우
+		if to != '':
+			querystring['to'] = to
 
 		response = requests.request("GET", url, params=querystring)
 
